@@ -1,0 +1,14 @@
+body {
+    background-image: url("images/pattern.jpg");
+    /*background-size: cover haria que la imagen cubra 100 del fondo, como esta ahora se repite*/
+    /**background-repeat: repetir en x, y o no repetir */
+    background-color: #27262b;
+}
+.cabecera,/* esto hace que lo que ponga en contenedor se copie a cabecera*/
+.contenedor {
+    max-width: 1000px;
+    margin: auto;
+}
+.contenedor{
+    background-color: white;
+}
