@@ -1,14 +1,35 @@
+:root{
+    /*las variables guardan valores en la memoria del navegador, esto me permite usarlas varias veces*/
+    /*esto es declarar las variables y asignarle un valor*/
+    --naranja: #ff9900;
+    --negro: #000;
+    --blanco: #FFF;
+    --negro2: #27262b;
+}
 body {
     background-image: url("images/pattern.jpg");
     /*background-size: cover haria que la imagen cubra 100 del fondo, como esta ahora se repite*/
     /**background-repeat: repetir en x, y o no repetir */
-    background-color: #27262b;
+    background-color: var(--negro2);
+    font-family: Arial, Helvetica, sans-serif;
 }
 .cabecera,/* esto hace que lo que ponga en contenedor se copie a cabecera*/
 .contenedor {
     max-width: 1000px;
     margin: auto;
 }
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    align-items: center;
+}
+
+.cabecera h1{
+    color: var(--naranja);
+    font-size: 24px;
+  }
 .contenedor{
-    background-color: white;
+    /*utilizamos la variable (root, arriba de todo del css se ve*/
+    background-color: var(--blanco);
 }
