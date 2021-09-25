@@ -13,7 +13,7 @@ body {
     background-color: var(--negro2);
     font-family: Arial, Helvetica, sans-serif;
 }
-.cabecera,/* esto hace que lo que ponga en contenedor se copie a cabecera*/
+.cabecera/* esto hace que lo que ponga en contenedor se copie a cabecera*/
 .contenedor {
     max-width: 1000px;
     margin: auto;
@@ -32,4 +32,10 @@ body {
 .contenedor{
     /*utilizamos la variable (root, arriba de todo del css se ve*/
     background-color: var(--blanco);
+    border-radius: 8px 8px 0 0;
+}
+.nav{
+    background-color: var(--naranja);
+    border-radius: 8px 8px 0 0;
+
 }
