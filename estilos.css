@@ -1,42 +1,104 @@
-:root{
-    /*las variables guardan valores en la memoria del navegador, esto me permite usarlas varias veces*/
-    /*esto es declarar las variables y asignarle un valor*/
-    --naranja: #ff9900;
+:root {
+    /* Las variables guardan valores en la memoria del navegador, esto me permite reutilizarlas y ordenar mejor mi código */
+
+    /* Esto es declarar las variables y asignarles un valor */
+    --naranja: #F90;
+    --amarillo: rgb(255, 217, 0);
     --negro: #000;
-    --blanco: #FFF;
     --negro2: #27262b;
+    --blanco: #FFFFFF;
 }
+
+/* Resetear algunos valores predeterminados del navegador */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url("images/pattern.jpg");
-    /*background-size: cover haria que la imagen cubra 100 del fondo, como esta ahora se repite*/
-    /**background-repeat: repetir en x, y o no repetir */
+    /* Poner color de fondo para usuarios con mala conexión a internet o por si no carga la imagen */
     background-color: var(--negro2);
+    background-image: url('images/pattern.jpg');
     font-family: Arial, Helvetica, sans-serif;
+    /*
+        ¿Repetir imagen de fondo?
+        background-repeat
+            repeat: repetir en X y en Y (predeterminado)
+            repeat-x: Eje X
+            repeat-y: Eje Y
+            no-repeat: No repite nada, queda solo en la esquina superior izq.
+        
+        Imagen que cubra el 100% del fondo pero sin perder proporción
+        background-size: cover;
+    */
 }
-/* esto hace que lo que ponga en contenedor se copie a cabecera*/
+/*unifica criterios para los dos*/
 .cabecera,
 .contenedor {
     max-width: 1000px;
     margin: auto;
 }
+
 .cabecera {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 8px;
     align-items: center;
+    padding-bottom: 8px;
 }
 
-.cabecera h1{
+.cabecera h1 {
     color: var(--naranja);
     font-size: 24px;
-  }
-.contenedor{
-    /*utilizamos la variable (root, arriba de todo del css se ve*/
+}
+
+.contenedor {
+    /* Utilizar la variable previamente declarada */
     background-color: var(--blanco);
     border-radius: 8px 8px 0 0;
 }
-.nav{
+
+/*
+    -------------------------------------
+                  Navegación
+    -------------------------------------
+*/
+
+.nav {
     background-color: var(--naranja);
     border-radius: 8px 8px 0 0;
-
 }
+
+.nav-lista {
+    /* Sacamos los puntitos */
+    list-style: none;
+    /*ordena items de costado*/
+    display: flex;
+    /*le da a cada boton su espacio a todos los lados, space-between solo los separa entre ellos*/
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-lista_item {
+    /*acomodo el palito (border right) a la derecha es 0 o 1 */
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid var(--amarillo);
+}
+
+.nav-link {
+    color: var(--blanco);
+    font-weight: bold;
+    /* Lo transformo en elemento de bloque para que la zona de click se agrande */
+    display: block;
+    /* Sacar el subrayado predeterminado */
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* .nav-form {
+    background-color: tomato;
+} */
