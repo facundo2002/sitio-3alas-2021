@@ -7,6 +7,7 @@
     --negro: #000;
     --negro2: #27262b;
     --blanco: #FFFFFF;
+    --espacio: 30px;
 }
 
 /* Resetear algunos valores predeterminados del navegador */
@@ -67,6 +68,7 @@ body {
 .nav {
     background-color: var(--naranja);
     border-radius: 8px 8px 0 0;
+    margin-bottom: var(--espacio);
 }
 
 .nav-lista {
@@ -102,3 +104,13 @@ body {
 /* .nav-form {
     background-color: tomato;
 } */
+/*
+    -------------------------------------
+                  Slider de imagenes
+    -------------------------------------
+*/
+.imagen {
+    text-align: center;
+    margin-bottom: var(--espacio);
+    
+}
