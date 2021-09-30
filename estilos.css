@@ -7,7 +7,7 @@
     --negro: #000;
     --negro2: #27262b;
     --blanco: #FFFFFF;
-    --espacio: 30px;
+    --espacio: 40px;
 }
 
 /* Resetear algunos valores predeterminados del navegador */
@@ -34,7 +34,7 @@ body {
         background-size: cover;
     */
 }
-/*unifica criterios para los dos*/
+
 .cabecera,
 .contenedor {
     max-width: 1000px;
@@ -68,22 +68,20 @@ body {
 .nav {
     background-color: var(--naranja);
     border-radius: 8px 8px 0 0;
+    /* Separo la navegación del siguiente elemento */
     margin-bottom: var(--espacio);
 }
 
 .nav-lista {
     /* Sacamos los puntitos */
     list-style: none;
-    /*ordena items de costado*/
     display: flex;
-    /*le da a cada boton su espacio a todos los lados, space-between solo los separa entre ellos*/
     justify-content: space-around;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .nav-lista_item {
-    /*acomodo el palito (border right) a la derecha es 0 o 1 */
     flex-grow: 1;
     text-align: center;
     border-right: 1px solid var(--amarillo);
@@ -104,13 +102,92 @@ body {
 /* .nav-form {
     background-color: tomato;
 } */
+
+
 /*
     -------------------------------------
-                  Slider de imagenes
+            Slider de imagenes
     -------------------------------------
 */
+
 .imagen {
     text-align: center;
     margin-bottom: var(--espacio);
-    
 }
+
+
+/*
+    -------------------------------------
+            Principal
+    -------------------------------------
+*/
+.principal {
+    background-color: chocolate;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: var(--espacio);
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+}
+
+
+
+/*
+    -------------------------------------
+            Categorias
+    -------------------------------------
+*/
+.categorias {
+    background-color: darkgreen;
+}
+
+
+/*
+    -------------------------------------
+            Productos
+    -------------------------------------
+*/
+.productos {
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+/* Solución 3, con un div adicional */
+.lampara-titulo {
+    margin-bottom: 20px;
+}
+.lampara-info {
+    display: flex;
+    align-items: flex-start;
+}
+.lampara-imagen {
+    margin-right: 20px;
+}
+
+/* Solución 2, con un div adicional
+.lampara-titulo {
+    margin-bottom: 20px;
+}
+.lampara-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+*/
+/*
+Solución 1 para un HTML simple
+.lampara {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.lampara-titulo {
+    Este elemento ocupa todas las columnas de su fila
+    grid-column: 1 / -1;
+}
+*/
+
